@@ -346,6 +346,47 @@ header h1 {
   font-size: 1.2rem;
 }
 
+#navWrapper {
+  background-color: #004132;
+}
+#navWrapper ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+#navWrapper ul li {
+  flex: 1;
+  text-align: center;
+  border: 1px solid black;
+}
+#navWrapper ul li.active {
+  background-color: #145E30;
+}
+#navWrapper ul li.active:hover {
+  background-color: #004132;
+}
+#navWrapper ul li.notactive:hover {
+  background-color: #145E30;
+}
+#navWrapper ul a {
+  display: block;
+  padding: 0.75rem;
+  color: white;
+  text-decoration: none;
+}
+
+#footerWrapper {
+  background-color: #145E30;
+  padding: 0.5rem 16px;
+}
+#footerWrapper p {
+  color: white;
+  margin: 0px;
+  font-weight: 300;
+  text-align: center;
+}
+
 @media only screen and (min-width: 35rem) {
   header {
     padding: 2rem 16px;
