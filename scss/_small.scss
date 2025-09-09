@@ -16,3 +16,20 @@ body{
     font-family:$defaultFont; 
     font-weight: $normalWeight;
 }
+
+#headerWrapper {
+  background-color: $secondaryColor;
+  color: white;
+}
+
+header{
+  display:flex;
+  align-items: flex-end;
+  padding:1rem $gutter;
+  gap: 8px;
+  justify-content: space-between;
+  h1{
+    margin:auto 0;
+    font-size: 1.2rem;
+  }
+}
