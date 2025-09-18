@@ -345,6 +345,15 @@ header h2 {
   margin: auto 0;
   font-size: 1.2rem;
   text-shadow: 2px 2px black;
+  text-align: center;
+}
+header h2 a {
+  color: white;
+  text-decoration: none;
+}
+header h2 a:hover {
+  transform: translateY(2px);
+  color: antiquewhite;
 }
 header #hamburger {
   margin: auto 0;
@@ -396,12 +405,47 @@ header #hamburger {
 }
 
 #mainWrapper {
-  height: 83vh;
+  min-height: 83vh;
   background-color: antiquewhite;
 }
 #mainWrapper h1 {
   margin: 0;
   padding: 32px 0px;
+}
+
+#fishSpecies {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding-bottom: 32px;
+}
+
+#fishSpecies div {
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #004132;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-color: #004132;
+  color: white;
+}
+#fishSpecies div img {
+  width: 100%;
+  height: auto;
+}
+#fishSpecies div h2 {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px black;
+}
+#fishSpecies div p {
+  padding-left: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
 }
 
 #footerWrapper {
@@ -413,6 +457,14 @@ header #hamburger {
   margin: 0px;
   font-weight: 300;
   text-align: center;
+}
+#footerWrapper p a {
+  color: white;
+  text-decoration: none;
+}
+#footerWrapper p a:hover {
+  transform: translateY(2px);
+  color: antiquewhite;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -426,12 +478,18 @@ header #hamburger {
     width: 80px;
     height: 80px;
   }
+  #navWrapper.show ul {
+    gap: 16px;
+  }
   img#hamburger {
     width: 40px;
     height: 40px;
   }
   #mainWrapper {
-    height: 82vh;
+    min-height: 82vh;
+  }
+  #fishSpecies {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 60rem) {
@@ -440,7 +498,7 @@ header #hamburger {
     margin: auto;
   }
   #mainWrapper {
-    height: 75vh;
+    min-height: 75vh;
   }
   #hamburger {
     display: none;
@@ -486,5 +544,8 @@ header #hamburger {
     padding: 15px 0;
     color: white;
     text-decoration: none;
+  }
+  #fishSpecies {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

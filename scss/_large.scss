@@ -3,7 +3,7 @@ header, nav, main, footer {
     margin: auto;
 }
 #mainWrapper{
-    height:75vh;
+    min-height:75vh;
 
 }
 
@@ -52,4 +52,8 @@ header, nav, main, footer {
         
     }
   }
+}
+
+#fishSpecies{
+  grid-template-columns: 1fr 1fr 1fr;
 }

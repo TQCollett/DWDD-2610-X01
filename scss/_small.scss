@@ -32,6 +32,15 @@ header {
     margin: auto 0;
     font-size: 1.2rem;
     text-shadow:2px 2px black;
+    text-align: center;
+    a{
+      color:white;
+      text-decoration: none;
+      &:hover{
+        transform: translateY(2px);
+        color:antiquewhite;
+      }
+    }
   }
   #hamburger{
     margin:auto 0;
@@ -84,7 +93,7 @@ header {
   
 // Main styling
 #mainWrapper{
-  height:83vh;
+  min-height:83vh;
   background-color: antiquewhite;
 
   h1{
@@ -92,6 +101,44 @@ header {
     padding:32px 0px;
   }
 }
+
+// Fish Species Styling
+
+#fishSpecies{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:$gutter;
+  padding-bottom:32px;
+}
+
+#fishSpecies div{
+  width:100%;
+  padding:1rem;
+  margin:0;
+  padding:0;
+  border: 1px solid $primaryColor;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-color:$primaryColor;
+  color:white;
+  img{
+    width:100%;
+    height:auto;
+  }
+  h2{
+    text-align: center;
+    font-style:italic;
+    font-size:1.30rem;
+    text-shadow:2px 2px black;
+  }
+  p{
+    padding-left: 15px;
+    font-size:1.1rem;
+    font-weight:bold;
+    text-shadow:1px 1px black;
+  }
+}
+
 
 // Footer stying
 
@@ -103,5 +150,13 @@ header {
     margin:0px;
     font-weight:$lightWeight;
     text-align:center;
+    a{
+      color:white;
+      text-decoration: none;
+      &:hover{
+        transform: translateY(2px);
+        color:antiquewhite;
+      }
+    }
   }
 }
