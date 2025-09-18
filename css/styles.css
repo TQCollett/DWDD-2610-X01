@@ -341,39 +341,67 @@ header {
   gap: 8px;
   justify-content: space-between;
 }
-header h1 {
+header h2 {
   margin: auto 0;
   font-size: 1.2rem;
+  text-shadow: 2px 2px black;
+}
+header #hamburger {
+  margin: auto 0;
 }
 
-#navWrapper {
+#navWrapper.hide {
+  display: none;
+}
+
+#navWrapper.show {
   background-color: #004132;
 }
-#navWrapper ul {
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px;
+#navWrapper.show ul {
   display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px 0;
 }
-#navWrapper ul li {
-  flex: 1;
+#navWrapper.show ul li {
   text-align: center;
   border: 1px solid black;
+  text-shadow: 2px 2px black;
+  border-radius: 6px;
+  box-shadow: 1px 1px 1px black;
 }
-#navWrapper ul li.active {
+#navWrapper.show ul li.active {
   background-color: #145E30;
 }
-#navWrapper ul li.active:hover {
+#navWrapper.show ul li.active:hover {
+  background-color: #004132;
+  transform: translateY(2px);
+}
+#navWrapper.show ul li.nonactive {
   background-color: #004132;
 }
-#navWrapper ul li.notactive:hover {
+#navWrapper.show ul li.nonactive:hover {
   background-color: #145E30;
+  transform: translateY(2px);
 }
-#navWrapper ul a {
+#navWrapper.show ul a {
+  width: 226px;
   display: block;
-  padding: 0.75rem;
+  padding: 15px 0;
   color: white;
   text-decoration: none;
+}
+
+#mainWrapper {
+  height: 83vh;
+  background-color: antiquewhite;
+}
+#mainWrapper h1 {
+  margin: 0;
+  padding: 32px 0px;
 }
 
 #footerWrapper {
@@ -391,17 +419,72 @@ header h1 {
   header {
     padding: 2rem 16px;
   }
-  header h1 {
+  header h2 {
     font-size: 2rem;
   }
   header img {
     width: 80px;
     height: 80px;
   }
+  img#hamburger {
+    width: 40px;
+    height: 40px;
+  }
+  #mainWrapper {
+    height: 82vh;
+  }
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
     max-width: 60rem;
     margin: auto;
+  }
+  #mainWrapper {
+    height: 75vh;
+  }
+  #hamburger {
+    display: none;
+  }
+  #navWrapper.hide {
+    display: block;
+    background-color: #004132;
+    padding: 15px 0;
+  }
+  #navWrapper.hide ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  #navWrapper.hide ul li {
+    text-align: center;
+    border: 1px solid black;
+    text-shadow: 2px 2px black;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px black;
+  }
+  #navWrapper.hide ul li.active {
+    background-color: #145E30;
+  }
+  #navWrapper.hide ul li.active:hover {
+    background-color: #004132;
+    transform: translateY(2px);
+  }
+  #navWrapper.hide ul li.nonactive {
+    background-color: #004132;
+  }
+  #navWrapper.hide ul li.nonactive:hover {
+    background-color: #145E30;
+    transform: translateY(2px);
+  }
+  #navWrapper.hide ul a {
+    width: 226px;
+    display: block;
+    padding: 15px 0;
+    color: white;
+    text-decoration: none;
   }
 }

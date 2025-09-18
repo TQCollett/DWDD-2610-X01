@@ -28,41 +28,71 @@ header {
   padding: 1rem $gutter;
   gap: 8px;
   justify-content: space-between;
-  h1 {
+  h2 {
     margin: auto 0;
     font-size: 1.2rem;
+    text-shadow:2px 2px black;
+  }
+  #hamburger{
+    margin:auto 0;
   }
 }
+#navWrapper.hide {display:none;}
 
-#navWrapper {
+#navWrapper.show {
   background-color: $primaryColor;
   ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
     display: flex;
+    list-style-type: none;
+    margin:0;
+    padding: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 16px 0;
     li {
-      flex: 1;
       text-align: center;
       border: 1px solid black;
+      text-shadow:2px 2px black;
+      border-radius: 6px;
+      box-shadow: 1px 1px 1px black;
     }
     li.active {
       background-color: $secondaryColor;
       &:hover {
         background-color: $primaryColor;
+        transform: translateY(2px);
       }
     }
-    li.notactive:hover {
-      background-color: $secondaryColor;
+    li.nonactive{
+      background-color: $primaryColor;
+      &:hover {
+        background-color: $secondaryColor;
+        transform: translateY(2px);
+      }
+
     }
     a {
+      width:226px;
       display: block;
-      padding: 0.75rem;
+      padding: 15px 0;
       color: white;
       text-decoration: none;
+      
     }
   }
 }
+  
+// Main styling
+#mainWrapper{
+  height:83vh;
+  background-color: antiquewhite;
+
+  h1{
+    margin:0;
+    padding:32px 0px;
+  }
+}
+
 // Footer stying
 
 #footerWrapper{
