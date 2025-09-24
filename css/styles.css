@@ -465,6 +465,20 @@ header #hamburger {
   color: antiquewhite;
 }
 
+video {
+  width: 90%;
+  margin: 5%;
+}
+
+summary {
+  margin: 5%;
+}
+
+#transcript {
+  margin: 0;
+  padding-bottom: 5%;
+}
+
 @media only screen and (min-width: 35rem) {
   header {
     padding: 2rem 16px;
