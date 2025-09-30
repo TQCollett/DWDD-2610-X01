@@ -449,20 +449,39 @@ header #hamburger {
 
 #footerWrapper {
   background-color: #145E30;
-  padding: 0.5rem 16px;
 }
-#footerWrapper p {
+
+footer {
+  margin: 0;
+  padding: 0.5rem 16px;
   color: white;
-  margin: 0px;
-  font-weight: 300;
   text-align: center;
 }
-#footerWrapper p a {
+footer a {
   color: white;
   text-decoration: none;
 }
-#footerWrapper p a:hover {
-  color: antiquewhite;
+footer a:hover {
+  transform: translateY(-4px);
+  text-shadow: 2px 2px 1px black;
+}
+footer section.contact p {
+  font-size: 1.1rem;
+  margin: 0px;
+}
+footer section.socials {
+  display: flex;
+  justify-content: center;
+}
+footer section.socials a {
+  font-size: 2rem;
+  padding: 1rem;
+}
+footer section.location {
+  font-size: 1.1rem;
+}
+footer p.legal {
+  color: white;
 }
 
 video {
@@ -481,6 +500,51 @@ summary {
 
 .hero img {
   width: 100%;
+}
+
+.allcards {
+  padding: 0 16px;
+}
+.allcards section {
+  border: 1px solid black;
+  border-radius: 32px 32px 16px 16px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.allcards section h2, .allcards section p, .allcards section img {
+  margin: 0;
+  padding: 1rem 16px;
+}
+.allcards section h2 {
+  font-size: 1.25rem;
+  text-align: center;
+  background-color: #004132;
+  color: white;
+  text-shadow: 1px 1px black;
+  border-bottom: 1px solid black;
+}
+.allcards section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.allcards section img.ete {
+  padding: 0;
+}
+.allcards section a {
+  display: block;
+  background-color: #145E30;
+  padding: 0.75rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 5rem 1rem 5rem;
+  border-radius: 16px;
+  box-shadow: 2px 2px black;
+}
+.allcards section a:hover {
+  background-color: #004132;
+  transform: translateY(2px);
 }
 
 @media only screen and (min-width: 35rem) {
@@ -506,6 +570,20 @@ summary {
   }
   #fishSpecies {
     grid-template-columns: 1fr 1fr;
+  }
+  footer div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .allcards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .allcards section {
+    flex-basis: calc(50% - 8px);
   }
 }
 @media only screen and (min-width: 60rem) {
@@ -562,6 +640,12 @@ summary {
     text-decoration: none;
   }
   #fishSpecies {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .allcards section {
+    flex-basis: calc(33.3333% - 10.6666666667px);
+  }
+  footer div {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

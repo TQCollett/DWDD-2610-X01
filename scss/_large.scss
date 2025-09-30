@@ -56,4 +56,13 @@ header, nav, main, footer {
 #fishSpecies{
   grid-template-columns: 1fr 1fr 1fr;
 }
-
+// Fish tank page
+.allcards{
+    section{
+        flex-basis:calc(33.3333% - (($gutter*2)/3));
+    }
+}
+//footer
+footer div{
+    grid-template-columns: 1fr 1fr 1fr;
+}

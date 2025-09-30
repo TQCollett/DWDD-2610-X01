@@ -143,22 +143,45 @@ header {
 
 #footerWrapper{
   background-color: $secondaryColor;
-  padding: .5rem $gutter;
-  p{
+}
+footer{
+  margin:0;
+  padding: 0.5rem $gutter;
+  color:white;
+  text-align: center;
+  a{
     color:white;
-    margin:0px;
-    font-weight:$lightWeight;
-    text-align:center;
-    a{
-      color:white;
-      text-decoration: none;
-      &:hover{
-        color:antiquewhite;
-      }
+    text-decoration: none;
+    &:hover{
+      transform: translateY(-4px);
+      text-shadow: 2px 2px 1px black;
     }
+  }
+  section.contact{
+    p{
+      font-size:1.1rem;
+      margin: 0px;
+    }
+
+  }
+  section.socials{
+    display:flex;
+    justify-content: center;
+    a{
+      font-size:2rem;
+      padding:1rem;
+    }
+    
+  }
+  section.location{
+    font-size:1.1rem;
+  }
+  p.legal{
+    color:white;
   }
 }
 
+//tank maintenance styling
 video{
   width:95%;
   margin: 0 2.5%;
@@ -175,3 +198,51 @@ summary{
     width:100%;
   }
 }
+
+// Fish tank Page
+
+.allcards{
+  padding: 0 $gutter;
+  section{
+    border: 1px solid black;
+    border-radius: 32px 32px 16px 16px;
+    overflow: hidden;
+    margin: 1rem 0;
+    h2, p, img {
+      margin: 0;
+      padding: 1rem $gutter;
+    }
+    h2{
+      font-size: 1.25rem;
+      text-align: center;
+      background-color: $primaryColor;
+      color:white;
+      text-shadow:1px 1px black; 
+      border-bottom: 1px solid black;
+    }
+    img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    img.ete{
+      padding:0;
+    }
+    a{
+      display:block;
+      background-color: $secondaryColor;
+      padding: .75rem;
+      color:white;
+      text-decoration: none;
+      text-align: center;
+      margin: 0 5rem 1rem 5rem;
+      border-radius: 16px;
+      box-shadow: 2px 2px black;
+      &:hover{
+        background-color: $primaryColor;
+        transform: translateY(2px);
+      }
+    }
+  }
+
+}// all cards end

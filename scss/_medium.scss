@@ -22,4 +22,19 @@ img#hamburger{
 #fishSpecies{
   grid-template-columns: 1fr 1fr;
 }
-
+//footer styling
+footer div{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:$gutter;
+}
+// Fish tank page
+.allcards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:$gutter;
+    justify-content: center;
+    section{
+        flex-basis:calc(50% - ($gutter/2));
+    }
+}
