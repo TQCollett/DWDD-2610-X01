@@ -334,6 +334,13 @@ body {
   color: white;
 }
 
+div.logoArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 header {
   display: flex;
   align-items: flex-end;
@@ -409,7 +416,7 @@ header #hamburger {
 }
 #mainWrapper h1 {
   margin: 0;
-  padding: 32px 0px;
+  padding: 32px 16px;
 }
 
 #fishSpecies {
