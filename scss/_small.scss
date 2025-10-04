@@ -21,12 +21,6 @@ body {
   background-color: $secondaryColor;
   color: white;
 }
-div.logoArea{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  gap: $gutter;
-}
 
 header {
   display: flex;
@@ -47,15 +41,10 @@ header {
       }
     }
   }
-  #hamburger{
-    margin:auto 0;
-  }
 }
-#navWrapper.hide {display:none;}
 
-#navWrapper.show {
-  background-color: $primaryColor;
-  ul {
+ul.hide {display:none;}
+ul.show {
     display: flex;
     list-style-type: none;
     margin:0;
@@ -94,7 +83,20 @@ header {
       
     }
   }
+
+#navWrapper {
+  background-color: $primaryColor;
+  nav{
+  padding:16px $gutter;
+  }
+  ion-icon{
+    margin:0;
+    color:white;
+    height: 50px;
+    width: 60px;
+  }
 }
+
   
 // Main styling
 #mainWrapper{

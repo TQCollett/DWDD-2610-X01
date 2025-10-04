@@ -334,13 +334,6 @@ body {
   color: white;
 }
 
-div.logoArea {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
 header {
   display: flex;
   align-items: flex-end;
@@ -361,18 +354,12 @@ header h2 a {
 header h2 a:hover {
   color: antiquewhite;
 }
-header #hamburger {
-  margin: auto 0;
-}
 
-#navWrapper.hide {
+ul.hide {
   display: none;
 }
 
-#navWrapper.show {
-  background-color: #004132;
-}
-#navWrapper.show ul {
+ul.show {
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -381,33 +368,46 @@ header #hamburger {
   justify-content: center;
   padding: 16px 0;
 }
-#navWrapper.show ul li {
+ul.show li {
   text-align: center;
   border: 1px solid black;
   text-shadow: 2px 2px black;
   border-radius: 6px;
   box-shadow: 1px 1px 1px black;
 }
-#navWrapper.show ul li.active {
+ul.show li.active {
   background-color: #145E30;
 }
-#navWrapper.show ul li.active:hover {
+ul.show li.active:hover {
   background-color: #004132;
   transform: translateY(2px);
 }
-#navWrapper.show ul li.nonactive {
+ul.show li.nonactive {
   background-color: #004132;
 }
-#navWrapper.show ul li.nonactive:hover {
+ul.show li.nonactive:hover {
   background-color: #145E30;
   transform: translateY(2px);
 }
-#navWrapper.show ul a {
+ul.show a {
   width: 226px;
   display: block;
   padding: 15px 0;
   color: white;
   text-decoration: none;
+}
+
+#navWrapper {
+  background-color: #004132;
+}
+#navWrapper nav {
+  padding: 16px 16px;
+}
+#navWrapper ion-icon {
+  margin: 0;
+  color: white;
+  height: 50px;
+  width: 60px;
 }
 
 #mainWrapper {
@@ -604,12 +604,12 @@ summary {
   #hamburger {
     display: none;
   }
-  #navWrapper.hide {
+  #navWrapper {
     display: block;
     background-color: #004132;
     padding: 15px 0;
   }
-  #navWrapper.hide ul {
+  #navWrapper ul {
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -618,28 +618,28 @@ summary {
     gap: 16px;
     justify-content: center;
   }
-  #navWrapper.hide ul li {
+  #navWrapper ul li {
     text-align: center;
     border: 1px solid black;
     text-shadow: 2px 2px black;
     border-radius: 6px;
     box-shadow: 1px 1px 1px black;
   }
-  #navWrapper.hide ul li.active {
+  #navWrapper ul li.active {
     background-color: #145E30;
   }
-  #navWrapper.hide ul li.active:hover {
+  #navWrapper ul li.active:hover {
     background-color: #004132;
     transform: translateY(2px);
   }
-  #navWrapper.hide ul li.nonactive {
+  #navWrapper ul li.nonactive {
     background-color: #004132;
   }
-  #navWrapper.hide ul li.nonactive:hover {
+  #navWrapper ul li.nonactive:hover {
     background-color: #145E30;
     transform: translateY(2px);
   }
-  #navWrapper.hide ul a {
+  #navWrapper ul a {
     width: 226px;
     display: block;
     padding: 15px 0;

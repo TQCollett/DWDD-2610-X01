@@ -21,10 +21,9 @@
 <body>
     <div id="headerWrapper">
         <header>
-            <div class="logoArea">
-                <a href="/index.html"><img src="img/fishLogo1x.png" alt="Tyler Design Logo" height="50" width="92" srcset="img/fishLogo1x.png 1x, img/fishLogo2x.png 2x, img/fishLogo3x.png 3x"></a>
-                <img id="hamburger" class="hide" src="img/hamburger.png" alt="Hamburger Menu" width="30" height="30">
-            </div>
+            
+            <a href="/index.html"><img src="img/fishLogo1x.png" alt="Tyler Design Logo" height="50" width="92" srcset="img/fishLogo1x.png 1x, img/fishLogo2x.png 2x, img/fishLogo3x.png 3x"></a>
+            
            
             <h2>
                 Tyler Collett Designs
@@ -32,9 +31,11 @@
             
         </header>
     </div>
-    <div id="navWrapper" class="hide">
+    <div id="navWrapper">
         <nav>
-            <ul>
+            <a id="hamburger"><ion-icon name="menu-outline" id="hamIcon" class="hide"></ion-icon></a>
+
+            <ul id="menuItems" class="hide">
                 <li class="nonactive"><a href="/index.html">01 Build a Start File</a></li>
                 <li class="nonactive"><a href="/02-my-fish-species.html">02 My Fish Species</a></li>
                 <li class="nonactive"><a href="/03.html">03 Tank Maintenance</a></li>
