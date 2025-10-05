@@ -283,28 +283,65 @@ summary{
   gap: $gutter;
   padding: 32px $gutter;
   flex-wrap: wrap;
-}
-#check{
-  background-color: $primaryColor;
-  color:white;
-  width:100%;
-  border-radius: 16px;
-  border: 2px solid black;
-  p, h2{
-    margin:0;
-    padding:$gutter;
-  }
-  img{
-    display:block;
-    margin:0 auto;
-  }
+  div{
+    background-color: $primaryColor;
+    color:white;
+    width:100%;
+    border-radius: 16px;
+    border: 2px solid black;
+    p, h2{
+      margin:0;
+      padding:$gutter;
+    }
+    img{
+      display:block;
+      margin:0 auto;
+      position:relative;
+      border-radius:64px;
+    }
 
-  h2{
-    font-size:1.25rem;
-    background-color: $secondaryColor;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    text-shadow: 1px 1px 2px black;
+    h2{
+      font-size:1.25rem;
+      background-color: $secondaryColor;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      text-shadow: 1px 1px 2px black;
+    }
+    
+    &.spin:hover img{animation: mySpin 1s 1;}
+    &.drop:hover img{animation: myDrop 1s 3;}
+    &.scoot:hover img{animation: myScoot 2s 1;}
+    &.flash:hover img{animation: myFlash 1s 3;}
+
+    @keyframes myDrop {
+      0% {bottom:20px; animation: linear;}
+      100% {bottom:-20px; animation-timing-function:linear;}
+    }
+    
+    @keyframes mySpin {
+    0% {transform:scale(1);}
+    25% {transform:scale(3);}
+    50% {transform:scale(0.75);}
+    75% {transform:scale(2);}
+    100% {transform:scale(1);}
+    }
+
+    @keyframes myScoot {
+    0% {transform:translateX(-80px);}
+    25% {transform:translate(-40px, -20px);}
+    50% {transform:translateX(0px);}
+    75% {transform:translate(40px, 20px);}
+    100% {transform:translateX(80px);}
+      
+    }
+    @keyframes myFlash {
+    0% {background-color:red;}
+    25% {background-color: black;}
+    50% {background-color:red;}
+    75% {background-color: black;}
+    100% {background-color:red;}
+      
+    }
   }
 }
 #checkListHead{
@@ -347,4 +384,3 @@ summary{
   }
 }
 
-    

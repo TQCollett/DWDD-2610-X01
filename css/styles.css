@@ -582,28 +582,102 @@ summary {
   padding: 32px 16px;
   flex-wrap: wrap;
 }
-
-#check {
+#checkList div {
   background-color: #004132;
   color: white;
   width: 100%;
   border-radius: 16px;
   border: 2px solid black;
 }
-#check p, #check h2 {
+#checkList div p, #checkList div h2 {
   margin: 0;
   padding: 16px;
 }
-#check img {
+#checkList div img {
   display: block;
   margin: 0 auto;
+  position: relative;
+  border-radius: 64px;
 }
-#check h2 {
+#checkList div h2 {
   font-size: 1.25rem;
   background-color: #145E30;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   text-shadow: 1px 1px 2px black;
+}
+#checkList div.spin:hover img {
+  animation: mySpin 1s 1;
+}
+#checkList div.drop:hover img {
+  animation: myDrop 1s 3;
+}
+#checkList div.scoot:hover img {
+  animation: myScoot 2s 1;
+}
+#checkList div.flash:hover img {
+  animation: myFlash 1s 3;
+}
+@keyframes myDrop {
+  0% {
+    bottom: 20px;
+    animation: linear;
+  }
+  100% {
+    bottom: -20px;
+    animation-timing-function: linear;
+  }
+}
+@keyframes mySpin {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(3);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  75% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes myScoot {
+  0% {
+    transform: translateX(-80px);
+  }
+  25% {
+    transform: translate(-40px, -20px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translate(40px, 20px);
+  }
+  100% {
+    transform: translateX(80px);
+  }
+}
+@keyframes myFlash {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: black;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: black;
+  }
+  100% {
+    background-color: red;
+  }
 }
 
 #checkListHead {
