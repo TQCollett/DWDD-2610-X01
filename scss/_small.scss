@@ -254,3 +254,97 @@ summary{
   }
 
 }// all cards end
+
+// checklist page
+#titleHero{
+  position:relative;
+  img{
+     width:100%;
+     height:auto;
+     display:block;
+  }
+  h1{
+    font-size:1.5rem;
+    margin:0;
+    position:absolute;
+    top:10%;
+    padding:$gutter;
+    color:white;
+    text-shadow: 2px 2px 2px black;
+    background: RGBA(20, 94, 48, 0.2);
+    background: linear-gradient(90deg,rgba(20, 94, 48, 0.01) 0%, rgba(20, 94, 48, 0.75) 50%, rgba(20, 94, 48, 0.01) 100%);
+    width:100%;
+    text-align: center;
+  }
+}
+
+#checkList{
+  display:flex;
+  gap: $gutter;
+  padding: 32px $gutter;
+  flex-wrap: wrap;
+}
+#check{
+  background-color: $primaryColor;
+  color:white;
+  width:100%;
+  border-radius: 16px;
+  border: 2px solid black;
+  p, h2{
+    margin:0;
+    padding:$gutter;
+  }
+  img{
+    display:block;
+    margin:0 auto;
+  }
+
+  h2{
+    font-size:1.25rem;
+    background-color: $secondaryColor;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-shadow: 1px 1px 2px black;
+  }
+}
+#checkListHead{
+  margin:auto 0;
+  display:flex;
+  flex-direction: column;
+  a{
+    margin:auto;
+  }
+  ion-icon{
+    width:40px;
+    height:40px;
+  }
+}
+#reviewsWrapper{
+  padding:$gutter;
+  text-align: center;
+}
+#reviews{
+  display:flex;
+  flex-wrap:wrap;
+  gap:$gutter;
+  section{
+    flex-basis:100%;
+    border: 1px solid black;
+    width:100%;
+    border-radius: 16px;
+  }
+  div{
+    display:flex;
+    justify-content: center;
+  }
+  img{
+    width:20px;
+    height:20px;
+    margin:0;
+  }
+  p, h3, div{
+    padding:0 $gutter;
+  }
+}
+
+    

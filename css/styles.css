@@ -554,6 +554,100 @@ summary {
   transform: translateY(2px);
 }
 
+#titleHero {
+  position: relative;
+}
+#titleHero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#titleHero h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  padding: 16px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  background: RGBA(20, 94, 48, 0.2);
+  background: linear-gradient(90deg, rgba(20, 94, 48, 0.01) 0%, rgba(20, 94, 48, 0.75) 50%, rgba(20, 94, 48, 0.01) 100%);
+  width: 100%;
+  text-align: center;
+}
+
+#checkList {
+  display: flex;
+  gap: 16px;
+  padding: 32px 16px;
+  flex-wrap: wrap;
+}
+
+#check {
+  background-color: #004132;
+  color: white;
+  width: 100%;
+  border-radius: 16px;
+  border: 2px solid black;
+}
+#check p, #check h2 {
+  margin: 0;
+  padding: 16px;
+}
+#check img {
+  display: block;
+  margin: 0 auto;
+}
+#check h2 {
+  font-size: 1.25rem;
+  background-color: #145E30;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  text-shadow: 1px 1px 2px black;
+}
+
+#checkListHead {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+}
+#checkListHead a {
+  margin: auto;
+}
+#checkListHead ion-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#reviewsWrapper {
+  padding: 16px;
+  text-align: center;
+}
+
+#reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+#reviews section {
+  flex-basis: 100%;
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 16px;
+}
+#reviews div {
+  display: flex;
+  justify-content: center;
+}
+#reviews img {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+#reviews p, #reviews h3, #reviews div {
+  padding: 0 16px;
+}
+
 @media only screen and (min-width: 35rem) {
   header {
     padding: 2rem 16px;
@@ -591,6 +685,57 @@ summary {
   }
   .allcards section {
     flex-basis: calc(50% - 8px);
+  }
+  #titleHero h1 {
+    font-size: 1.75rem;
+  }
+  #check {
+    flex-basis: calc(50% - 8px);
+  }
+  #navWrapper {
+    display: block;
+    background-color: #004132;
+    padding: 15px 0;
+  }
+  #navWrapper ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  #navWrapper ul li {
+    text-align: center;
+    border: 1px solid black;
+    text-shadow: 2px 2px black;
+    border-radius: 6px;
+    box-shadow: 1px 1px 1px black;
+  }
+  #navWrapper ul li.active {
+    background-color: #145E30;
+  }
+  #navWrapper ul li.active:hover {
+    background-color: #004132;
+    transform: translateY(2px);
+  }
+  #navWrapper ul li.nonactive {
+    background-color: #004132;
+  }
+  #navWrapper ul li.nonactive:hover {
+    background-color: #145E30;
+    transform: translateY(2px);
+  }
+  #navWrapper ul a {
+    width: 226px;
+    display: block;
+    padding: 15px 0;
+    color: white;
+    text-decoration: none;
+  }
+  #checkListHead ion-icon {
+    display: none;
   }
 }
 @media only screen and (min-width: 60rem) {
@@ -654,5 +799,18 @@ summary {
   }
   footer div {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #titleHero h1 {
+    font-size: 2rem;
+  }
+  #checkList {
+    flex-wrap: nowrap;
+    padding: 32px 0;
+  }
+  #reviewsWrapper {
+    padding: 32px 0;
+  }
+  #reviews section {
+    flex-basis: calc(50% - 8px);
   }
 }
