@@ -102,11 +102,6 @@ ul.show {
 #mainWrapper{
   min-height:83vh;
   background-color: antiquewhite;
-
-  h1{
-    margin:0;
-    padding:32px $gutter;
-  }
 }
 
 // Fish Species Styling
@@ -383,4 +378,44 @@ summary{
     padding:0 $gutter;
   }
 }
+// style the row
+.row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  margin: 0;
+  padding:$gutter;
+}
+.column{
+  padding: 0 $gutter;
+  margin: $gutter 0;
+  img{
+    width:100%;
+    height:auto;
+  }
+  h1{
+    margin:0;
+    padding:0;
+  }
+  h2{
+    margin:0;
+    padding:0;
+  }
+}
+.background{
+  background-color: $primaryColor;
+  color:white;
+  h2{
+    text-shadow: 2px 2px 2px black;
+  }
+  img{
+    border: 1px solid white;
+    border-radius: 16px;
+  }
+}
+// Create the for loop for about us page
 
+@for $i from 1 through 12 {
+  $w: calc($i/12) * 100%;
+  .small-#{$i} {flex-basis: $w}
+}

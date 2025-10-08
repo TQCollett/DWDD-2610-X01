@@ -86,3 +86,8 @@ footer div{
         flex-basis:calc(50% - ($gutter/2));
     }
 }
+// Create the for loop for about us page
+@for $i from 1 through 12 {
+  $w: calc($i /12) *100%;
+  .large-#{$i} {flex-basis: $w}
+}
