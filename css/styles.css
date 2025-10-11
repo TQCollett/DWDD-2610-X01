@@ -825,6 +825,7 @@ summary {
 }
 .column.form h3 {
   border-bottom: 1px solid black;
+  font-size: 1.25rem;
 }
 .column.form input:required {
   border-top: 4px solid #a02121;
@@ -834,6 +835,21 @@ summary {
   background-color: #d5e3ec;
   border-top: 6px solid black;
   border-right: 6px solid black;
+}
+.column.form input[type=submit] {
+  display: block;
+  background-color: #a02121;
+  color: white;
+  font-size: 1.25rem;
+  padding: 16px 1.25rem;
+  border-radius: 16px;
+  border: 2px solid black;
+  font-weight: bold;
+}
+.column.form input[type=submit]:hover {
+  background-color: #761818;
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 10px black;
 }
 
 @media only screen and (min-width: 35rem) {
