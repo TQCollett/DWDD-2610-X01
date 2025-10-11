@@ -11,6 +11,10 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+h1{
+  margin:0;
+  padding:$gutter;
+}
 body {
   height: 100%;
   font-family: $defaultFont;
@@ -102,6 +106,7 @@ ul.show {
 #mainWrapper{
   min-height:83vh;
   background-color: antiquewhite;
+
 }
 
 // Fish Species Styling
@@ -418,4 +423,38 @@ summary{
 @for $i from 1 through 12 {
   $w: calc($i/12) * 100%;
   .small-#{$i} {flex-basis: $w}
+}
+
+// Contact Us page
+
+.column.form{
+  label{
+    display:block;
+    font-size:0.75rem;
+  }
+  
+  input[type=text], input[type=tel], input[type=number], input[type=email], input[type=password], select, input[type=date]{
+    display:block;
+    margin-bottom:$gutter;
+    font-size:1.1rem;
+    width:100%;
+    padding: 0.5rem $gutter;
+    border: 1px solid black;
+    border-radius: 4px 32px 32px 32px;
+    border-top: 4px solid $secondaryColor;
+    border-right: 4px solid $secondaryColor;
+  }
+  
+  h3{
+    border-bottom:1px solid black;
+  }
+  input:required{
+    border-top: 4px solid #a02121;
+    border-right: 4px solid #a02121;
+  }
+  input:focus{
+    background-color:#d5e3ec;
+    border-top: 6px solid black;
+    border-right: 6px solid black;
+  }
 }

@@ -323,6 +323,11 @@ html {
   box-sizing: border-box;
 }
 
+h1 {
+  margin: 0;
+  padding: 16px;
+}
+
 body {
   height: 100%;
   font-family: "Inter", sans-serif;
@@ -801,6 +806,34 @@ summary {
 
 .small-12 {
   flex-basis: 100%;
+}
+
+.column.form label {
+  display: block;
+  font-size: 0.75rem;
+}
+.column.form input[type=text], .column.form input[type=tel], .column.form input[type=number], .column.form input[type=email], .column.form input[type=password], .column.form select, .column.form input[type=date] {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 0.5rem 16px;
+  border: 1px solid black;
+  border-radius: 4px 32px 32px 32px;
+  border-top: 4px solid #145E30;
+  border-right: 4px solid #145E30;
+}
+.column.form h3 {
+  border-bottom: 1px solid black;
+}
+.column.form input:required {
+  border-top: 4px solid #a02121;
+  border-right: 4px solid #a02121;
+}
+.column.form input:focus {
+  background-color: #d5e3ec;
+  border-top: 6px solid black;
+  border-right: 6px solid black;
 }
 
 @media only screen and (min-width: 35rem) {

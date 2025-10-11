@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="/" />
+    <title>Contact Us | Jube's Aquariums</title>
+    <meta name="description" content="Home start file for DWDD 2610 X01">
+    <meta name="author" content="Tyler Collett">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+    
+    <!--fav icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            
+            <a href="/index.html"><img src="img/fishLogo1x.png" alt="Tyler Design Logo" height="66" width="101" srcset="img/fishLogo1x.png 1x, img/fishLogo2x.png 2x, img/fishLogo3x.png 3x"></a>
+            
+            <div id="checkListHead">
+                <h2>
+                Jube's Aquariums
+                </h2>
+                <a id="hamburger"><ion-icon name="menu-outline" id="hamIcon" class="hide"></ion-icon></a>
+            </div>
+            
+            
+        </header>
+    </div>
+    <div id="navWrapper">
+        <nav>
+            <ul id="menuItems" class="hide">
+                <li class="nonactive"><a href="/index.html">01 Build a Start File</a></li>
+                <li class="nonactive"><a href="/02-my-fish-species.html">02 My Fish Species</a></li>
+                <li class="nonactive"><a href="/03.html">03 Tank Maintenance</a></li>
+                <li class="nonactive"><a href="/04.html">04 My Fish Tanks</a></li>
+                <li class="nonactive"><a href="/05.html">05 Maintenance Checklist</a></li>
+                <li class="nonactive"><a href="/06.html">06 About Us</a></li>
+                <li class="active"><a href="/07.html">07 Contact Us</a></li>
+                <li class="nonactive"><a href="#">08 Technology Conference</a></li>
+                <li class="nonactive"><a href="#">09 Landscape & Lighting</a></li>
+                <li class="nonactive"><a href="#">10 Hotel Chain</a></li>
+                <li class="nonactive"><a href="#">11 Single Page Portfolio</a></li> 
+            </ul>
+        </nav>
+    </div>
+    <div id="mainWrapper">
+        <main>
+            <div class="row">
+                <div class="column small-12 medium-4 large-6">
+                    <h1>Contact Us</h1>
+                    <p>
+                        Have questions about your tank setup, need expert advice on fish care, or looking for that perfect addition to your aquatic collection? We're here to help! Whether you're a beginner or a seasoned aquarist, the team at Jube's Aquarium is happy to assist. Visit us in-store, give us a call, or drop us a message using the form below. We look forward to hearing from you!
+                    </p>
+
+
+                </div>
+                <div class="column form column small-12 medium-8 large-6">
+                    <form action="thanks.html" method="get" class="contactForm" autocomplete="on">
+                        <h3>
+                            Personal Information
+                        </h3>
+                        <label>First Name: <span><input type="text" name="fname" autocomplete="given-name" required title="First Name Here"></span></label>
+                        <label>Last Name: <input type="text" name="lname" autocomplete="family-name" required title="Last Name Here"></label>
+                        <label>Email: <input type="email" name="email" autocomplete="email" required title="Your Email Here"></label>
+                        <label>Phone: <input type="tel" name="phone" autocomplete="tel" required title="Cellphone Here"></label>
+                        <label>Address: <input type="text" name="address" autocomplete="street-address" title="Street Address here Here"></label>
+                        <label>City: <input type="text" name="city" autocomplete="address-level2" title="City Here"></label>
+                        <label>State: <input type="text" name="state" autocomplete="address-level1" title="State Here"></label>
+                        <label>Zip: <input type="number" name="zip" autocomplete="postal-code" title="Zipcode Here"></label>
+                        <h3>
+                            More Information
+                        </h3>
+                        <label>
+                            Where did you find me:
+                            <select name="findMe">
+                                <option value="No Selection Made">Please Select</option>
+                                <option value="TikTok">TikTok</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Youtube">Youtube</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
+                        <label>When did you find me?<input type="date" name="date" title="When you found me Here"></label>
+                        <h3>What kind of fish do you keep or are interested in keeping?</h3>
+                        <label><input type="checkbox" name="Salt Water Fish"></span>Salt Water Fish</label>
+                        <label><input type="checkbox" name="Fresh Water Fish">Fresh Water Fish</label>
+                        <label><input type="checkbox" name="Amphibians">Amphibians</label>
+                        <label><input type="checkbox" name="Invertabrates">Invertabrates</label>
+                        <label><input type="checkbox" name="Other">Other:<label><input type="text" name="Other Interests" title="Other Aquatics"></label>
+                        <h3>What do you want to be updated about?</h3>
+                        <label><input type="radio" name="update" value="youtube">New Youtube Video</label>
+                        <label><input type="radio" name="update" value="tiktok">New TikTok Video</label>
+                        <label><input type="radio" name="update" value="none" checked>No Updates</label>
+                        <h3>Create an Account</h3>
+                        <label>UserName (6 or more characters)<input type="text" name="username" required minlength="6"></label>
+                        <label>Password (5-9 letters or numbers)<input type="password" name="password" required pattern="[A-Za-z0-9]{5,9}" title="5-9 letters and numbers please"></label>
+                        <input type="submit" value="Keep in Touch">
+                    </form>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <div id="footerWrapper">
+        <footer>
+            <div>
+                <section class="contact">
+                    <p><ion-icon name="people-outline"></ion-icon>Tyler Collett</p>
+                    <p><ion-icon name="desktop-outline"></ion-icon>Web Design and Developer</p>
+                    <p><a href="mailto:tyler.quinn.collett@gmail.com"><ion-icon name="send-outline"></ion-icon>Tyler.quinn.collett@gmail.com</a></p>
+                    <p><a href="/index.html"><ion-icon name="planet-outline"></ion-icon>Tyler Collett Design</a></p>
+                    <p><a href="tel:1234567890"><ion-icon name="phone-portrait-outline"></ion-icon>123-456-7890</a></p>
+
+                </section>
+                <section class="socials">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.tiktok.com/@jubesaquariums?is_from_webapp=1&sender_device=pc"><ion-icon name="logo-tiktok"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </section>
+                <section class="location">
+                    <address>Tyler Collett Design<br>1234 Average Avenue<br>Someplace, Utah, 12345</address>
+                </section>
+            </div>
+            <p class="legal">&copy; <span id="year">x</span> &bull; Tyler Collett &bull; Contact Us Page</p>
+        </footer>
+    </div>
+    <script type="module" src="js/scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
