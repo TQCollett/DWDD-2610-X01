@@ -19,6 +19,7 @@ body {
   height: 100%;
   font-family: $defaultFont;
   font-weight: $normalWeight;
+  display:grid;
 }
 
 #headerWrapper {
@@ -89,6 +90,48 @@ ul.show {
   }
 
 #navWrapper {
+
+  display:block;
+    background-color: $primaryColor;
+    padding: 15px 0;
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin:0;
+        padding: 0px;
+        flex-wrap: wrap;
+        gap:$gutter;
+        justify-content: center;
+        li {
+        text-align: center;
+        border: 1px solid black;
+        text-shadow:2px 2px black;
+        border-radius: 6px;
+        box-shadow: 1px 1px 1px black;
+        }
+        li.active {
+        background-color: $secondaryColor;
+        &:hover {
+            background-color: $primaryColor;
+            transform: translateY(2px);
+        }
+        }
+        li.nonactive{
+        background-color: $primaryColor;
+        &:hover {
+            background-color: $secondaryColor;
+            transform: translateY(2px);
+        }
+
+        }
+        a {
+        width:226px;
+        display: block;
+        padding: 15px 0;
+        color: white;
+        text-decoration: none;
+    }
+  }
   background-color: $primaryColor;
   nav{
   padding:16px $gutter;
@@ -104,9 +147,7 @@ ul.show {
   
 // Main styling
 #mainWrapper{
-  min-height:83vh;
   background-color: antiquewhite;
-
 }
 
 // Fish Species Styling
@@ -473,4 +514,14 @@ summary{
       box-shadow:4px 4px 10px black;
     }
   }
+}
+
+#navWrapper{
+  grid-row-start:4;
+}
+
+#navlinks, #top a{
+  text-decoration: none;
+  color:white;
+  font-size:2rem;
 }
