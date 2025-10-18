@@ -6,17 +6,20 @@ document.querySelector('#year').textContent = rightNow.getFullYear();
 const hamMenu = document.querySelector('#hamburger')
 const hamIcon = document.querySelector('#hamIcon')
 const navShow = document.querySelector('#menuItems')
+const wrapperShow = document.querySelector('#navWrapper')
 
 hamMenu.addEventListener('click', () => {
     if (hamMenu.className === "hide"){
         hamMenu.className = "show"
         hamIcon.name = "close-outline"
         navShow.className = "show"
+        wrapperShow.className= "show"
     }
     else{
         hamMenu.className = "hide"
         hamIcon.name = "menu-outline"
         navShow.className = "hide"
+        wrapperShow.className="hide"
     }
 })
 

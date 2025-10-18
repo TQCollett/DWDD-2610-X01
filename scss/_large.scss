@@ -87,3 +87,8 @@ footer div{
   $w: calc($i /12) *100%;
   .large-#{$i} {flex-basis: $w}
 }
+
+// conference page
+.column.flip{
+    height:250px;
+}

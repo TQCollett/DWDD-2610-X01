@@ -47,11 +47,11 @@ footer div{
     flex-basis:calc(50% - ($gutter/2));
 }
 
-#navWrapper{
+#navWrapper.hide{
     display:block;
     background-color: $primaryColor;
     padding: 15px 0;
-    ul {
+    ul#menuItems.hide {
         display: flex;
         list-style-type: none;
         margin:0;
@@ -107,4 +107,21 @@ body{
 
 #navlinks, .hamburger{
   display:none;
+}
+
+
+// Conference page styling
+.heroVideo{
+  text-align: left;
+  h1{
+    font-size:2rem;
+
+  }
+  p{
+    font-size:1.5rem;
+  }
+}
+
+.column.flip{
+    height:200px;
 }

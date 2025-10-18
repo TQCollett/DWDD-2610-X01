@@ -361,7 +361,7 @@ header h2 a:hover {
   color: antiquewhite;
 }
 
-ul.hide {
+ul#menuItems.hide {
   display: none;
 }
 
@@ -403,13 +403,16 @@ ul.show a {
   text-decoration: none;
 }
 
-#navWrapper {
+#navWrapper.hide {
+  display: none;
+}
+
+#navWrapper.show {
   display: block;
   background-color: #004132;
   padding: 15px 0;
-  background-color: #004132;
 }
-#navWrapper ul {
+#navWrapper.show ul {
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -418,38 +421,38 @@ ul.show a {
   gap: 16px;
   justify-content: center;
 }
-#navWrapper ul li {
+#navWrapper.show ul li {
   text-align: center;
   border: 1px solid black;
   text-shadow: 2px 2px black;
   border-radius: 6px;
   box-shadow: 1px 1px 1px black;
 }
-#navWrapper ul li.active {
+#navWrapper.show ul li.active {
   background-color: #145E30;
 }
-#navWrapper ul li.active:hover {
+#navWrapper.show ul li.active:hover {
   background-color: #004132;
   transform: translateY(2px);
 }
-#navWrapper ul li.nonactive {
+#navWrapper.show ul li.nonactive {
   background-color: #004132;
 }
-#navWrapper ul li.nonactive:hover {
+#navWrapper.show ul li.nonactive:hover {
   background-color: #145E30;
   transform: translateY(2px);
 }
-#navWrapper ul a {
+#navWrapper.show ul a {
   width: 226px;
   display: block;
   padding: 15px 0;
   color: white;
   text-decoration: none;
 }
-#navWrapper nav {
+#navWrapper.show nav {
   padding: 16px 16px;
 }
-#navWrapper ion-icon {
+#navWrapper.show ion-icon {
   margin: 0;
   color: white;
   height: 50px;
@@ -892,7 +895,7 @@ summary {
   box-shadow: 4px 4px 10px black;
 }
 
-#navWrapper {
+#navWrapper.skip {
   grid-row-start: 4;
 }
 
@@ -900,6 +903,85 @@ summary {
   text-decoration: none;
   color: white;
   font-size: 2rem;
+}
+
+.heroVideo {
+  margin: 0;
+  position: relative;
+  text-align: center;
+}
+.heroVideo video, .heroVideo h1, .heroVideo p {
+  margin: 0;
+}
+.heroVideo video {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+.heroVideo h1 {
+  padding: 0;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px black;
+}
+.heroVideo p {
+  font-size: 1rem;
+  text-shadow: 2px 2px 2px black;
+  padding-top: 16px;
+  border-bottom: 2px solid #145E30;
+}
+.heroVideo .heroText {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  left: 0;
+  color: white;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.column.flip {
+  background-color: transparent;
+  width: 100%;
+  height: 275px;
+  perspective: 1000px;
+}
+.column.flip p, .column.flip h2 {
+  margin: 0;
+}
+.column.flip .flipCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.column.flip:hover .flipCard {
+  transform: rotateY(180deg);
+}
+.column.flip .flipFront, .column.flip .flipBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 32px;
+  overflow: hidden;
+  background-color: #145E30;
+}
+.column.flip .flipFront {
+  border: 5px solid #145E30;
+}
+.column.flip .flipBack {
+  transform: rotateY(180deg);
+  color: white;
+  padding: 16px;
+}
+.column.flip .flipBack h2 {
+  border-bottom: 3px solid white;
+}
+.column.flip .flipBack p {
+  padding-top: 16px;
 }
 
 @media only screen and (min-width: 35rem) {
@@ -943,12 +1025,12 @@ summary {
   #check {
     flex-basis: calc(50% - 8px);
   }
-  #navWrapper {
+  #navWrapper.hide {
     display: block;
     background-color: #004132;
     padding: 15px 0;
   }
-  #navWrapper ul {
+  #navWrapper.hide ul#menuItems.hide {
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -957,28 +1039,28 @@ summary {
     gap: 16px;
     justify-content: center;
   }
-  #navWrapper ul li {
+  #navWrapper.hide ul#menuItems.hide li {
     text-align: center;
     border: 1px solid black;
     text-shadow: 2px 2px black;
     border-radius: 6px;
     box-shadow: 1px 1px 1px black;
   }
-  #navWrapper ul li.active {
+  #navWrapper.hide ul#menuItems.hide li.active {
     background-color: #145E30;
   }
-  #navWrapper ul li.active:hover {
+  #navWrapper.hide ul#menuItems.hide li.active:hover {
     background-color: #004132;
     transform: translateY(2px);
   }
-  #navWrapper ul li.nonactive {
+  #navWrapper.hide ul#menuItems.hide li.nonactive {
     background-color: #004132;
   }
-  #navWrapper ul li.nonactive:hover {
+  #navWrapper.hide ul#menuItems.hide li.nonactive:hover {
     background-color: #145E30;
     transform: translateY(2px);
   }
-  #navWrapper ul a {
+  #navWrapper.hide ul#menuItems.hide a {
     width: 226px;
     display: block;
     padding: 15px 0;
@@ -1029,6 +1111,18 @@ summary {
   }
   #navlinks, .hamburger {
     display: none;
+  }
+  .heroVideo {
+    text-align: left;
+  }
+  .heroVideo h1 {
+    font-size: 2rem;
+  }
+  .heroVideo p {
+    font-size: 1.5rem;
+  }
+  .column.flip {
+    height: 200px;
   }
 }
 @media only screen and (min-width: 60rem) {
@@ -1138,5 +1232,8 @@ summary {
   }
   .large-12 {
     flex-basis: 100%;
+  }
+  .column.flip {
+    height: 250px;
   }
 }
