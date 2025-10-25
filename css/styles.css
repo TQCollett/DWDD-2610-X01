@@ -335,6 +335,10 @@ body {
   display: grid;
 }
 
+body.servicesPage {
+  display: block;
+}
+
 #headerWrapper {
   background-color: #145E30;
   color: white;
@@ -771,7 +775,6 @@ summary {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  padding: 16px;
 }
 
 .column {
@@ -782,11 +785,7 @@ summary {
   width: 100%;
   height: auto;
 }
-.column h1 {
-  margin: 0;
-  padding: 0;
-}
-.column h2 {
+.column h1, .column h2, .column p {
   margin: 0;
   padding: 0;
 }
@@ -984,21 +983,25 @@ summary {
   padding-top: 16px;
 }
 
-.swiper, .swiper img {
+.swiper {
+  display: block;
   width: 100%;
   height: auto;
 }
-
 .swiper img {
   display: block;
   position: relative;
+  width: 100%;
+  height: auto;
 }
 .swiper .sliderText {
   position: absolute;
-  top: 60%;
+  top: 15%;
   left: 5%;
+  right: 5%;
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 .swiper .sliderText p, .swiper .sliderText h2 {
   margin-left: 5%;
@@ -1010,6 +1013,19 @@ summary {
 .swiper .sliderText h2 {
   text-shadow: 2px 2px black;
   border-bottom: 3px solid #145E30;
+}
+
+.servicesCard h2 {
+  text-align: center;
+  background-color: #145E30;
+  color: white;
+  border-radius: 16px 16px 0px 0px;
+  padding: 16px 0px;
+  text-shadow: 2px 2px 2px black;
+}
+
+.servicesBlurb img {
+  clip-path: circle(36.5% at 50% 50%);
 }
 
 @media only screen and (min-width: 35rem) {
@@ -1151,6 +1167,12 @@ summary {
   }
   .column.flip {
     height: 200px;
+  }
+  .swiper .sliderText {
+    top: 50%;
+    left: 5%;
+    right: 30%;
+    text-align: left;
   }
 }
 @media only screen and (min-width: 60rem) {

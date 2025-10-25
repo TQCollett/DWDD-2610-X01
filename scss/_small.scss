@@ -21,6 +21,9 @@ body {
   font-weight: $normalWeight;
   display:grid;
 }
+body.servicesPage{
+  display:block;
+}
 
 #headerWrapper {
   background-color: $secondaryColor;
@@ -428,7 +431,6 @@ summary{
   flex-wrap:wrap;
   justify-content: center;
   margin: 0;
-  padding:$gutter;
 }
 .column{
   padding: 0 $gutter;
@@ -437,11 +439,7 @@ summary{
     width:100%;
     height:auto;
   }
-  h1{
-    margin:0;
-    padding:0;
-  }
-  h2{
+  h1, h2, p{
     margin:0;
     padding:0;
   }
@@ -608,21 +606,24 @@ summary{
 
 
 // service page
-.swiper, .swiper img {
+.swiper{
+  display:block;
   width: 100%;
   height: auto;
-}
-.swiper{
   img{
     display:block;
     position: relative;
+    width:100%;
+    height:auto;
   }
   .sliderText{
     position: absolute;
-    top:60%;
+    top:15%;
     left:5%;
+    right:5%;
     color:white;
     background-color: rgba(0,0,0,.4);
+    text-align:center;
     p, h2{
       margin-left:5%;
       margin-right:5%;
@@ -634,5 +635,22 @@ summary{
       text-shadow:2px 2px  black;
       border-bottom: 3px solid $secondaryColor;
     }
+  }
+}
+
+.servicesCard{
+  h2{
+    text-align:center;
+    background-color: $secondaryColor;
+    color:white;
+    border-radius:16px 16px 0px 0px;
+    padding:$gutter 0px;
+    text-shadow: 2px 2px 2px black;
+  }
+}
+
+.servicesBlurb{
+  img{
+    clip-path: circle(36.5% at 50% 50%);
   }
 }

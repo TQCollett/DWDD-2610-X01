@@ -25,7 +25,7 @@ hamMenu.addEventListener('click', () => {
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
-  effect: 'slide',
+  effect: 'cube',
   speed: 2000,
 
   // If we need pagination
