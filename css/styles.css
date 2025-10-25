@@ -984,6 +984,34 @@ summary {
   padding-top: 16px;
 }
 
+.swiper, .swiper img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper img {
+  display: block;
+  position: relative;
+}
+.swiper .sliderText {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.swiper .sliderText p, .swiper .sliderText h2 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.swiper .sliderText p {
+  padding-bottom: 5px;
+}
+.swiper .sliderText h2 {
+  text-shadow: 2px 2px black;
+  border-bottom: 3px solid #145E30;
+}
+
 @media only screen and (min-width: 35rem) {
   header {
     padding: 2rem 16px;

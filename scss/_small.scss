@@ -605,3 +605,34 @@ summary{
     }
   }
 }//end of flipcard
+
+
+// service page
+.swiper, .swiper img {
+  width: 100%;
+  height: auto;
+}
+.swiper{
+  img{
+    display:block;
+    position: relative;
+  }
+  .sliderText{
+    position: absolute;
+    top:60%;
+    left:5%;
+    color:white;
+    background-color: rgba(0,0,0,.4);
+    p, h2{
+      margin-left:5%;
+      margin-right:5%;
+    }
+    p{
+      padding-bottom: 5px;
+    }
+    h2{
+      text-shadow:2px 2px  black;
+      border-bottom: 3px solid $secondaryColor;
+    }
+  }
+}

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <link rel="canonical" href="/" />
-    <title>Aquascaping Conference in Saratoga Springs, Utah | Jube's Aquariums</title>
-    <meta name="description" content="Aquascaping conference in Saratoga Springs, Utah">
+    <title>Services Page | Jube's Aquariums</title>
+    <meta name="description" content="Services for Jube's Aquariums">
     <meta name="author" content="Tyler Collett">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     
     <!--fav icon-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -44,8 +45,8 @@
                 <li class="nonactive"><a href="/05.html">05 Maintenance Checklist</a></li>
                 <li class="nonactive"><a href="/06.html">06 About Us</a></li>
                 <li class="nonactive"><a href="/07.html">07 Contact Us</a></li>
-                <li class="active"><a href="/08.html">08 Aquascaping Conference</a></li>
-                <li class="nonactive"><a href="/09.html">09 Services Page</a></li>
+                <li class="nonactive"><a href="/08.html">08 Aquascaping Conference</a></li>
+                <li class="active"><a href="/09.html">09 Services Page</a></li>
                 <li class="nonactive"><a href="#">10 Hotel Chain</a></li>
                 <li class="nonactive"><a href="#">11 Single Page Portfolio</a></li> 
             </ul>
@@ -53,65 +54,60 @@
     </div>
     <div id="mainWrapper">
         <main>
-            <div class="heroVideo">
-                <video autoplay muted playsinline loop width="800" height="500">
-                    <source src="/media/hero_video.webm" type="video/webm" />
-                    <source src="/media/hero_video.mp4" type="video/mp4" />
-                </video>
-                <div class="heroText">
-                    <h1>
-                        Aquascaping Conference
-                    </h1>
-                    <p>
-                        Find Community &bull; Grow &bull; Learn
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column flip small-12 medium-6">
-                    <div class="flipCard">
-                        <div class="flipFront">
-                            <img src="img/dario_hysginon.webp" alt="Ruby Red Badis">
-                        </div>
-                        <div class="flipBack">
-                            <h2>Find Community</h2>
-                            <p>
-                                This aquascaping conference is more than a dive into underwater design—it's a chance to connect with others who share your passion. Whether you're new or experienced, you can learn, share ideas, and build lasting connections in a supportive, creative community.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="column flip small-12 medium-6">
-                    <div class="flipCard">
-                        <div class="flipFront">
-                        <img src="img/dario_dario.webp" alt="Scarlet Badis">
-                        </div>
-                        <div class="flipBack">
-                            <h2>
-                                Learn
-                            </h2>
-                            <p>
-                                Our Aquascaping conference is a great place to learn new skills through expert talks, live demos, and hands-on workshops. Whether you're just starting out or looking to improve, you'll pick up tips on design, plant care, and the latest techniques from experienced aquascapers.
-                            </p>
+            <div class="swiper">
+            <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 700px)" srcset="img/services/services_slider_1_small.webp">
+                            <source media="(max-width:1100px)" srcset="img/services/services_slider_1_medium.webp">
+                            <img src="img/services/services_slider_1_large.webp" alt="Fish Tank" width="16" height="9">
 
-                        </div>
-                    </div>
-                </div>
-                <div class="column flip small-12 medium-6">
-                    <div class="flipCard">
-                        <div class="flipFront">
-                            <img src="img/badis_badis.webp" alt="Blue Badis">
-                        </div>
-                        <div class="flipBack">
+                        </picture>
+                        <div class="sliderText">
                             <h2>
-                                Grow
+                                Services
                             </h2>
                             <p>
-                                This aquascaping conference helps you grow not just in skill, but as a person. It encourages patience, creativity, and attention to detail, while connecting you with others who share your passion. Stepping out of your comfort zone to learn and share builds confidence and personal fulfillment.
+                                Comprehensive tank maintenance for Saratoga Springs, Utah
                             </p>
                         </div>
                     </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 700px)" srcset="img/services/services_slider_2_small.webp">
+                            <source media="(max-width:1100px)" srcset="img/services/services_slider_2_medium.webp">
+                            <img src="img/services/services_slider_2_large.webp" alt="Fish Tank" width="16" height="9">
+                        </picture>
+                        <div class="sliderText">
+                            <h2>
+                                Services
+                            </h2>
+                            <p>
+                                Professional aquascaping for Saratoga Springs, Utah
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source media="(max-width: 700px)" srcset="img/services/services_slider_3_small.webp">
+                            <source media="(max-width:1100px)" srcset="img/services/services_slider_3_medium.webp">
+                            <img src="img/services/services_slider_3_large.webp" alt="Fish Tank" width="16" height="9">
+                        </picture>
+                        <div class="sliderText">
+                            <h2>
+                                Services
+                            </h2>
+                            <p>
+                                Fish sourcing for Saratoga Springs, Utah
+                            </p>
+                        </div>
+                    </div>
+                    ...
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
             </div>
         </main>
@@ -140,8 +136,9 @@
             <p class="legal">&copy; <span id="year">x</span> &bull; Tyler Collett &bull; Aquascaping Conference</p>
         </footer>
     </div>
-    <script type="module" src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="js/scripts.js"></script>
 </body>
 </html>
