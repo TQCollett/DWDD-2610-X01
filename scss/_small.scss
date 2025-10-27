@@ -637,17 +637,34 @@ summary{
     }
   }
 }
+.rowServices{
+  
+  .servicesCard{
+    position:relative;
+    h2{
+      text-align:center;
+      background-color: $secondaryColor;
+      color:white;
+      border-radius:16px 16px 0px 0px;
+      padding:$gutter 0px;
+      text-shadow: 2px 2px 2px black;
+    }
+    img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+    img:last-child{
+      width:calc(100% - 32px);
+      height:auto;
+      position:absolute;
+      bottom:0px;
+      left:16px;
+    }
 
-.servicesCard{
-  h2{
-    text-align:center;
-    background-color: $secondaryColor;
-    color:white;
-    border-radius:16px 16px 0px 0px;
-    padding:$gutter 0px;
-    text-shadow: 2px 2px 2px black;
-  }
 }
+}
+
 
 .servicesBlurb{
   img{
