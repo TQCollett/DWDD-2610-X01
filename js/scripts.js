@@ -5,21 +5,16 @@ document.querySelector('#year').textContent = rightNow.getFullYear();
 
 const hamMenu = document.querySelector('#hamburger')
 const hamIcon = document.querySelector('#hamIcon')
-const navShow = document.querySelector('#menuItems')
-const wrapperShow = document.querySelector('#navWrapper')
+const toggleNav = document.querySelector('#navWrapper')
 
 hamMenu.addEventListener('click', () => {
-    if (hamMenu.className === "hide"){
-        hamMenu.className = "show"
+    if (hamIcon.name === "menu-outline"){
         hamIcon.name = "close-outline"
-        navShow.className = "show"
-        wrapperShow.className= "show"
+        toggleNav.classList.toggle('hide')
     }
     else{
-        hamMenu.className = "hide"
         hamIcon.name = "menu-outline"
-        navShow.className = "hide"
-        wrapperShow.className="hide"
+        toggleNav.classList.toggle('hide')
     }
 })
 const swiper = new Swiper('.swiper', {
@@ -37,6 +32,10 @@ const swiper = new Swiper('.swiper', {
    delay: 5000,
  },
 });
+
+
+// dropdown
+
 
 //Review Card Generation Maintenance Checklist
 import {reviews} from "../data/reviews.js"

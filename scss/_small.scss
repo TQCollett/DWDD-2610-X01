@@ -51,99 +51,77 @@ header {
   }
 }
 
-ul#menuItems.hide {display:none;}
-ul.show {
-    display: flex;
-    list-style-type: none;
-    margin:0;
-    padding: 0px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 16px 0;
-    li {
-      text-align: center;
-      border: 1px solid black;
-      text-shadow:2px 2px black;
-      border-radius: 6px;
-      box-shadow: 1px 1px 1px black;
-    }
-    li.active {
-      background-color: $secondaryColor;
-      &:hover {
-        background-color: $primaryColor;
-        transform: translateY(2px);
-      }
-    }
-    li.nonactive{
-      background-color: $primaryColor;
-      &:hover {
-        background-color: $secondaryColor;
-        transform: translateY(2px);
-      }
+.hide{display:none;}
 
-    }
-    a {
-      width:226px;
-      display: block;
-      padding: 15px 0;
-      color: white;
-      text-decoration: none;
-      
-    }
-  }
-#navWrapper.hide{display:none;}
-#navWrapper.show {
+#navWrapper {
   display:block;
   background-color: $primaryColor;
-  padding: 15px 0;
+  padding:0;
     ul {
         display: flex;
         list-style-type: none;
         margin:0;
         padding: 0px;
         flex-wrap: wrap;
-        gap:$gutter;
-        justify-content: center;
         li {
-        text-align: center;
-        border: 1px solid black;
+        text-align: left;
+        width:100%;
         text-shadow:2px 2px black;
-        border-radius: 6px;
-        box-shadow: 1px 1px 1px black;
+        border-bottom:1px solid black;
         }
         li.active {
         background-color: $secondaryColor;
         &:hover {
             background-color: $primaryColor;
-            transform: translateY(2px);
         }
         }
         li.nonactive{
         background-color: $primaryColor;
         &:hover {
             background-color: $secondaryColor;
-            transform: translateY(2px);
         }
-
         }
         a {
-        width:226px;
         display: block;
-        padding: 15px 0;
+        padding: 15px $gutter;
         color: white;
         text-decoration: none;
+        ul{
+          padding:0px;
+          margin:0px;
+        }
     }
   }
-  nav{
-  padding:16px $gutter;
+.dropdown>a::after{
+  content:"\25BC";
+  float:right;
   }
+.dropdown ul{
+  display:none;
+  li{
+    background-color: $secondaryColor;
+    margin-left:2rem;
+    border: 1px solid black;
+    border-radius: 16px 0 0 16px;
+    &:hover{
+      background-color:$primaryColor;
+    }
+  }
+}
+
+.dropdown:hover ul{
+  display:block;
+  background-color: $primaryColor;
+  border:none;
+}
+
   ion-icon{
     margin:0;
     color:white;
     height: 50px;
     width: 60px;
   }
-}
+}//end of nav wrapper
 
   
 // Main styling
@@ -671,3 +649,13 @@ summary{
     clip-path: circle(36.5% at 50% 50%);
   }
 }
+header ion-icon{
+  width:40px;
+  height:40px;
+  display:block;
+}
+a#hamburger{
+  align-self: center;
+}
+//mobile menu
+#navWrapper.hide{display:none;}

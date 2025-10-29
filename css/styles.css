@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -365,98 +366,72 @@ header h2 a:hover {
   color: antiquewhite;
 }
 
-ul#menuItems.hide {
+.hide {
   display: none;
 }
 
-ul.show {
+#navWrapper {
+  display: block;
+  background-color: #004132;
+  padding: 0;
+}
+#navWrapper ul {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0px;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 16px 0;
 }
-ul.show li {
-  text-align: center;
-  border: 1px solid black;
+#navWrapper ul li {
+  text-align: left;
+  width: 100%;
   text-shadow: 2px 2px black;
-  border-radius: 6px;
-  box-shadow: 1px 1px 1px black;
+  border-bottom: 1px solid black;
 }
-ul.show li.active {
+#navWrapper ul li.active {
   background-color: #145E30;
 }
-ul.show li.active:hover {
-  background-color: #004132;
-  transform: translateY(2px);
-}
-ul.show li.nonactive {
+#navWrapper ul li.active:hover {
   background-color: #004132;
 }
-ul.show li.nonactive:hover {
+#navWrapper ul li.nonactive {
+  background-color: #004132;
+}
+#navWrapper ul li.nonactive:hover {
   background-color: #145E30;
-  transform: translateY(2px);
 }
-ul.show a {
-  width: 226px;
+#navWrapper ul a {
   display: block;
-  padding: 15px 0;
+  padding: 15px 16px;
   color: white;
   text-decoration: none;
 }
-
-#navWrapper.hide {
+#navWrapper ul a ul {
+  padding: 0px;
+  margin: 0px;
+}
+#navWrapper .dropdown > a::after {
+  content: "▼";
+  float: right;
+}
+#navWrapper .dropdown ul {
   display: none;
 }
-
-#navWrapper.show {
-  display: block;
-  background-color: #004132;
-  padding: 15px 0;
-}
-#navWrapper.show ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0px;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-#navWrapper.show ul li {
-  text-align: center;
+#navWrapper .dropdown ul li {
+  background-color: #145E30;
+  margin-left: 2rem;
   border: 1px solid black;
-  text-shadow: 2px 2px black;
-  border-radius: 6px;
-  box-shadow: 1px 1px 1px black;
+  border-radius: 16px 0 0 16px;
 }
-#navWrapper.show ul li.active {
-  background-color: #145E30;
-}
-#navWrapper.show ul li.active:hover {
-  background-color: #004132;
-  transform: translateY(2px);
-}
-#navWrapper.show ul li.nonactive {
+#navWrapper .dropdown ul li:hover {
   background-color: #004132;
 }
-#navWrapper.show ul li.nonactive:hover {
-  background-color: #145E30;
-  transform: translateY(2px);
-}
-#navWrapper.show ul a {
-  width: 226px;
+#navWrapper .dropdown:hover ul {
   display: block;
-  padding: 15px 0;
-  color: white;
-  text-decoration: none;
+  background-color: #004132;
+  border: none;
 }
-#navWrapper.show nav {
-  padding: 16px 16px;
-}
-#navWrapper.show ion-icon {
+#navWrapper ion-icon {
   margin: 0;
   color: white;
   height: 50px;
@@ -1043,6 +1018,20 @@ summary {
   clip-path: circle(36.5% at 50% 50%);
 }
 
+header ion-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+a#hamburger {
+  align-self: center;
+}
+
+#navWrapper.hide {
+  display: none;
+}
+
 @media only screen and (min-width: 35rem) {
   header {
     padding: 2rem 16px;
@@ -1054,8 +1043,8 @@ summary {
     width: 80px;
     height: 80px;
   }
-  #navWrapper.show ul {
-    gap: 16px;
+  #hamburger {
+    display: none;
   }
   img#hamburger {
     width: 40px;
@@ -1087,44 +1076,42 @@ summary {
   #navWrapper.hide {
     display: block;
     background-color: #004132;
-    padding: 15px 0;
   }
-  #navWrapper.hide ul#menuItems.hide {
+  #navWrapper.hide #menuItems {
     display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0px;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
   }
-  #navWrapper.hide ul#menuItems.hide li {
+  #navWrapper.hide #menuItems .nonactive, #navWrapper.hide #menuItems .active:hover {
+    background-color: #145E30;
+  }
+  #navWrapper.hide #menuItems .active, #navWrapper.hide #menuItems .nonactive:hover {
+    background-color: #004132;
+  }
+  #navWrapper.hide #menuItems li {
+    flex-basis: 25%;
     text-align: center;
-    border: 1px solid black;
-    text-shadow: 2px 2px black;
-    border-radius: 6px;
-    box-shadow: 1px 1px 1px black;
+    border: none;
+    border-right: 1px solid black;
   }
-  #navWrapper.hide ul#menuItems.hide li.active {
+  #navWrapper.hide #menuItems li:last-child {
+    border: none;
+  }
+  #navWrapper.hide #menuItems li ul {
+    display: flex;
+    position: absolute;
+    left: -999rem;
+    z-index: 10;
+    flex-direction: column;
+  }
+  #navWrapper.hide #menuItems li ul li {
+    padding: 0px;
+    margin: 0px;
     background-color: #145E30;
+    text-align: left;
+    border-radius: 0 0 0 0;
+    border-bottom: 1px solid black;
   }
-  #navWrapper.hide ul#menuItems.hide li.active:hover {
-    background-color: #004132;
-    transform: translateY(2px);
-  }
-  #navWrapper.hide ul#menuItems.hide li.nonactive {
-    background-color: #004132;
-  }
-  #navWrapper.hide ul#menuItems.hide li.nonactive:hover {
-    background-color: #145E30;
-    transform: translateY(2px);
-  }
-  #navWrapper.hide ul#menuItems.hide a {
-    width: 226px;
-    display: block;
-    padding: 15px 0;
-    color: white;
-    text-decoration: none;
+  #navWrapper.hide #menuItems li:hover ul {
+    left: auto;
   }
   #checkListHead ion-icon {
     display: none;
@@ -1194,51 +1181,6 @@ summary {
   header, nav, main, footer {
     max-width: 60rem;
     margin: auto;
-  }
-  #hamburger {
-    display: none;
-  }
-  #navWrapper {
-    display: block;
-    background-color: #004132;
-    padding: 15px 0;
-  }
-  #navWrapper ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0px;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-  }
-  #navWrapper ul li {
-    text-align: center;
-    border: 1px solid black;
-    text-shadow: 2px 2px black;
-    border-radius: 6px;
-    box-shadow: 1px 1px 1px black;
-  }
-  #navWrapper ul li.active {
-    background-color: #145E30;
-  }
-  #navWrapper ul li.active:hover {
-    background-color: #004132;
-    transform: translateY(2px);
-  }
-  #navWrapper ul li.nonactive {
-    background-color: #004132;
-  }
-  #navWrapper ul li.nonactive:hover {
-    background-color: #145E30;
-    transform: translateY(2px);
-  }
-  #navWrapper ul a {
-    width: 226px;
-    display: block;
-    padding: 15px 0;
-    color: white;
-    text-decoration: none;
   }
   #fishSpecies {
     grid-template-columns: 1fr 1fr 1fr;
