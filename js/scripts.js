@@ -33,13 +33,43 @@ const swiper = new Swiper('.swiper', {
  },
 });
 
+// Aquariums page
+import {aquariums} from "../data/aquariums.js"
 
-// dropdown
+const myRecs = document.querySelector('#recommendations')
+
+for (let x = 0; x< aquariums.length; x++){
+    const myCard = document.createElement('section')
+    const myName = document.createElement('h2')
+    myName.textContent = aquariums[x].name
+
+    const myAddress = document.createElement('div')
+    const myAddOne = document.createElement ('p')
+    myAddOne.textContent = aquariums[x].address[0]
+    const myAddTwo = document.createElement ('p')
+    myAddTwo.textContent = aquariums[x].address[1]
+    myAddress.appendChild(myAddOne)
+    myAddress.appendChild(myAddTwo)
+
+    const myImg = document.createElement('img')
+    myImg.src =`img/aquariums/${aquariums[x].img}`
+
+    const myURL = document.createElement('a')
+    myURL.textContent = "Learn More Here"
+    myURL.href = aquariums[x].site
+
+    myCard.appendChild(myName)
+    myCard.appendChild(myImg)
+    myCard.appendChild(myAddress)
+    myCard.appendChild(myURL)
+
+    myRecs.appendChild(myCard)
+}
+
 
 
 //Review Card Generation Maintenance Checklist
-import {reviews} from "../data/reviews.js"
-console.log(reviews)
+/* import {reviews} from "../data/reviews.js"
 
 const myReviews = document.querySelector('#reviews')
 
@@ -66,3 +96,4 @@ for (let x = 0; x < reviews.length; x++){
 
     myReviews.appendChild(mySection)
 }
+*/

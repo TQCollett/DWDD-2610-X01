@@ -131,3 +131,31 @@ body{
         text-align:left;
     }
 }
+
+//recommendations page
+#recommendations{
+  section{
+    display:grid;
+    background-color: white;
+    border-radius: 16px 16px 0 0;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+    "image name"
+    "image address"
+    "image URL";
+    border-radius: 0px;
+    h2, div, a{
+        align-self: center;
+    }
+    h2{
+        background-color: white;
+        color:$primaryColor;
+        text-shadow:none;
+        font-weight:bold;
+    }
+    a{
+        width:95%;
+        margin:auto;
+    }
+  }//End of Section
+}//End of #recommendations

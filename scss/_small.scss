@@ -53,6 +53,7 @@ header {
 #navWrapper {
   display:block;
   background-color: $primaryColor;
+  border-top: 1px solid black;
   padding:0;
     ul {
         display: flex;
@@ -656,3 +657,62 @@ a#hamburger{
 }
 //mobile menu
 #navWrapper.hide{display:none;}
+
+// Recommendations Page
+#recommendations{
+  section{
+    display:grid;
+    background-color: white;
+    border-radius: 16px 16px 0 0;
+    grid-template-areas:
+    "name"
+    "image"
+    "address"
+    "URL"
+    ;
+    margin:$gutter;
+    h2{
+      margin:0;
+      padding:$gutter;
+      grid-area: name;
+      text-align: center;
+      background-color: $secondaryColor;
+      border-radius: 16px 16px 0 0;
+      color:white;
+      text-shadow: 2px 2px 2px black;
+    }
+    img{
+      grid-area: image;
+      display:block;
+      margin: 8px auto;
+      width:95%;
+      height:auto;
+      border-radius: 8px;
+    }
+    div{
+      grid-area: address;
+      font-style: italic; 
+      margin-left:$gutter;
+      p{
+        margin:0;
+      }
+    }
+    a{
+      grid-area: URL;
+      text-decoration:none;
+      color:white;
+      background-color: $secondaryColor;
+      width:50%;
+      text-align: center;
+      margin: 8px auto;
+      padding: 12px;
+      box-shadow: 0px 0px 4px black;
+      border-radius: 16px;
+      text-shadow: 1px 1px 1px black;
+      &:hover{
+        background-color: $primaryColor;
+        transform: translateY(2px);
+      }
+    }
+  }//End of Section
+}//End of #recommendations

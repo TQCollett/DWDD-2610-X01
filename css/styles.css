@@ -369,6 +369,7 @@ header h2 a:hover {
 #navWrapper {
   display: block;
   background-color: #004132;
+  border-top: 1px solid black;
   padding: 0;
 }
 #navWrapper ul {
@@ -1028,6 +1029,57 @@ a#hamburger {
   display: none;
 }
 
+#recommendations section {
+  display: grid;
+  background-color: white;
+  border-radius: 16px 16px 0 0;
+  grid-template-areas: "name" "image" "address" "URL";
+  margin: 16px;
+}
+#recommendations section h2 {
+  margin: 0;
+  padding: 16px;
+  grid-area: name;
+  text-align: center;
+  background-color: #145E30;
+  border-radius: 16px 16px 0 0;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#recommendations section img {
+  grid-area: image;
+  display: block;
+  margin: 8px auto;
+  width: 95%;
+  height: auto;
+  border-radius: 8px;
+}
+#recommendations section div {
+  grid-area: address;
+  font-style: italic;
+  margin-left: 16px;
+}
+#recommendations section div p {
+  margin: 0;
+}
+#recommendations section a {
+  grid-area: URL;
+  text-decoration: none;
+  color: white;
+  background-color: #145E30;
+  width: 50%;
+  text-align: center;
+  margin: 8px auto;
+  padding: 12px;
+  box-shadow: 0px 0px 4px black;
+  border-radius: 16px;
+  text-shadow: 1px 1px 1px black;
+}
+#recommendations section a:hover {
+  background-color: #004132;
+  transform: translateY(2px);
+}
+
 @media only screen and (min-width: 35rem) {
   header {
     padding: 2rem 16px;
@@ -1172,6 +1224,27 @@ a#hamburger {
     right: 30%;
     text-align: left;
   }
+  #recommendations section {
+    display: grid;
+    background-color: white;
+    border-radius: 16px 16px 0 0;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "image name" "image address" "image URL";
+    border-radius: 0px;
+  }
+  #recommendations section h2, #recommendations section div, #recommendations section a {
+    align-self: center;
+  }
+  #recommendations section h2 {
+    background-color: white;
+    color: #004132;
+    text-shadow: none;
+    font-weight: bold;
+  }
+  #recommendations section a {
+    width: 95%;
+    margin: auto;
+  }
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
@@ -1238,5 +1311,23 @@ a#hamburger {
   }
   .column.flip {
     height: 250px;
+  }
+  #recommendations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #recommendations section {
+    grid-template-columns: 1fr 1fr;
+  }
+  #recommendations section div, #recommendations section h2 {
+    padding: 0;
+    margin: 0;
+  }
+  #recommendations section h2 {
+    text-align: left;
+  }
+  #recommendations section a {
+    padding: 8px;
+    margin-bottom: 8px;
   }
 }
