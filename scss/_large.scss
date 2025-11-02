@@ -13,7 +13,7 @@ header, nav, main, footer {
     }
 }
 //footer
-footer div{
+.footerSections{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -64,5 +64,63 @@ footer div{
             padding: 8px;
             margin-bottom:8px;
         }
+    }
+}
+
+.contact{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    p{
+        text-align: justify;
+    }
+}
+//single page styling
+
+header, nav, main, footer {
+    max-width: 60rem;
+    margin: auto;
+}
+body#singlePageBody{
+    display:grid;
+    grid-template-columns: 250px auto;
+    header, nav, main, footer {
+    max-width: 60rem;
+    margin: auto;
+}
+}
+#navSingleWrapper{
+    grid-row: 1 / span 3;
+    position: relative;
+    #singlePageMenu{
+        flex-direction: column;
+        height:100vh;
+        justify-content: center;
+        position:fixed;
+        li{
+            flex:none;
+        a{
+            flex-direction: row;
+            width:250px;
+            justify-content: space-between;
+            img{
+                display:block;
+            }
+        &:hover img{
+            transform:translateX(10px) scale(1.2)
+        }
+        &:hover span{
+            transform:translateX(-10px) scale(1.2)
+        }
+        &:hover{
+            background-color: lighten($secondaryColor, 5%);
+        }
+        }
+        }
+    }
+}
+
+#home{
+    video{
+        width:100%;
     }
 }

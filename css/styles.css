@@ -315,6 +315,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 /*---- apply a natural box layout model to all elements -------*/
@@ -330,14 +331,13 @@ h1 {
 }
 
 body {
-  height: 100%;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   display: block;
 }
 
 #headerWrapper {
-  background-color: #145E30;
+  background-color: #004132;
   color: white;
 }
 
@@ -475,7 +475,7 @@ header h2 a:hover {
 }
 
 #footerWrapper {
-  background-color: #145E30;
+  background-color: #004132;
 }
 
 footer {
@@ -483,6 +483,7 @@ footer {
   padding: 0.5rem 16px;
   color: white;
   text-align: center;
+  width: 100%;
 }
 footer a {
   color: white;
@@ -492,20 +493,21 @@ footer a:hover {
   transform: translateY(-4px);
   text-shadow: 2px 2px 1px black;
 }
-footer section.contact p {
+footer .contact p {
   font-size: 1.1rem;
   margin: 0px;
 }
-footer section.socials {
+footer .socials {
   display: flex;
   justify-content: center;
 }
-footer section.socials a {
+footer .socials a {
   font-size: 2rem;
   padding: 1rem;
 }
-footer section.location {
+footer .location {
   font-size: 1.1rem;
+  display: block;
 }
 footer p.legal {
   color: white;
@@ -1080,6 +1082,85 @@ a#hamburger {
   transform: translateY(2px);
 }
 
+#mainWrapperSingle {
+  background-color: antiquewhite;
+}
+#mainWrapperSingle main section {
+  min-height: 100vh;
+}
+
+#home {
+  display: flex;
+  background: RGBA(20, 94, 48, 0.5);
+  background: linear-gradient(180deg, rgba(20, 94, 48, 0.2) 0%, rgb(20, 94, 48) 25%, rgba(20, 94, 48, 0.8) 75%, rgba(20, 94, 48, 0.2) 100%);
+}
+#home .heroVideo {
+  margin: auto;
+}
+
+#about {
+  background: linear-gradient(180deg, rgba(20, 94, 48, 0.2) 0%, rgba(20, 94, 48, 0.2) 90%, white 100%);
+  display: flex;
+}
+#about .aboutWrapper {
+  margin: auto 0;
+}
+
+#services {
+  display: flex;
+  background: linear-gradient(180deg, white 0%, white 90%, rgba(20, 94, 48, 0.8) 100%);
+}
+#services .header {
+  padding-left: 16px;
+}
+#services .servicesWrapper {
+  margin: auto;
+}
+
+#form {
+  background-color: rgba(20, 94, 48, 0.8);
+  color: white;
+}
+#form input[type=submit] {
+  background-color: #145E30;
+}
+#form input[type=submit]:hover {
+  background-color: rgb(15.5263157895, 72.9736842105, 37.2631578947);
+}
+
+#navSingleWrapper {
+  background-color: #145E30;
+  margin: 0;
+  position: sticky;
+  top: 0;
+}
+#navSingleWrapper #singlePageMenu {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+#navSingleWrapper #singlePageMenu li {
+  flex-basis: 25%;
+}
+#navSingleWrapper #singlePageMenu li a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  align-items: center;
+  color: white;
+}
+#navSingleWrapper #singlePageMenu li a span {
+  display: none;
+}
+#navSingleWrapper #singlePageMenu li a img {
+  width: 44px;
+  height: auto;
+}
+#navSingleWrapper #singlePageMenu li.active {
+  background-color: rgb(11.0526315789, 51.9473684211, 26.5263157895);
+}
+
 @media only screen and (min-width: 35rem) {
   header {
     padding: 2rem 16px;
@@ -1245,6 +1326,16 @@ a#hamburger {
     width: 95%;
     margin: auto;
   }
+  #navSingleWrapper #singlePageMenu li a span {
+    display: block;
+    padding: 16px;
+  }
+  #navSingleWrapper #singlePageMenu li a img {
+    display: none;
+  }
+  #navSingleWrapper #singlePageMenu li.active {
+    background-color: rgb(11.0526315789, 51.9473684211, 26.5263157895);
+  }
 }
 @media only screen and (min-width: 60rem) {
   header, nav, main, footer {
@@ -1257,7 +1348,7 @@ a#hamburger {
   .allcards section {
     flex-basis: calc(33.3333% - 10.6666666667px);
   }
-  footer div {
+  .footerSections {
     grid-template-columns: 1fr 1fr 1fr;
   }
   #titleHero h1 {
@@ -1329,5 +1420,57 @@ a#hamburger {
   #recommendations section a {
     padding: 8px;
     margin-bottom: 8px;
+  }
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact p {
+    text-align: justify;
+  }
+  header, nav, main, footer {
+    max-width: 60rem;
+    margin: auto;
+  }
+  body#singlePageBody {
+    display: grid;
+    grid-template-columns: 250px auto;
+  }
+  body#singlePageBody header, body#singlePageBody nav, body#singlePageBody main, body#singlePageBody footer {
+    max-width: 60rem;
+    margin: auto;
+  }
+  #navSingleWrapper {
+    grid-row: 1/span 3;
+    position: relative;
+  }
+  #navSingleWrapper #singlePageMenu {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+  }
+  #navSingleWrapper #singlePageMenu li {
+    flex: none;
+  }
+  #navSingleWrapper #singlePageMenu li a {
+    flex-direction: row;
+    width: 250px;
+    justify-content: space-between;
+  }
+  #navSingleWrapper #singlePageMenu li a img {
+    display: block;
+  }
+  #navSingleWrapper #singlePageMenu li a:hover img {
+    transform: translateX(10px) scale(1.2);
+  }
+  #navSingleWrapper #singlePageMenu li a:hover span {
+    transform: translateX(-10px) scale(1.2);
+  }
+  #navSingleWrapper #singlePageMenu li a:hover {
+    background-color: rgb(24.4736842105, 115.0263157895, 58.7368421053);
+  }
+  #home video {
+    width: 100%;
   }
 }

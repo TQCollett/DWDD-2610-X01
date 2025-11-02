@@ -3,6 +3,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 /*---- apply a natural box layout model to all elements -------*/
@@ -16,14 +17,13 @@ h1{
   padding:$gutter;
 }
 body {
-  height: 100%;
   font-family: $defaultFont;
   font-weight: $normalWeight;
   display:block;
 }
 
 #headerWrapper {
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
   color: white;
 }
 
@@ -168,13 +168,14 @@ header {
 // Footer stying
 
 #footerWrapper{
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
 }
 footer{
   margin:0;
   padding: 0.5rem $gutter;
   color:white;
   text-align: center;
+  width:100%;
   a{
     color:white;
     text-decoration: none;
@@ -183,14 +184,14 @@ footer{
       text-shadow: 2px 2px 1px black;
     }
   }
-  section.contact{
+  .contact{
+
     p{
       font-size:1.1rem;
       margin: 0px;
     }
-
   }
-  section.socials{
+  .socials{
     display:flex;
     justify-content: center;
     a{
@@ -199,8 +200,9 @@ footer{
     }
     
   }
-  section.location{
+  .location{
     font-size:1.1rem;
+    display:block;
   }
   p.legal{
     color:white;
@@ -716,3 +718,82 @@ a#hamburger{
     }
   }//End of Section
 }//End of #recommendations
+
+//single page
+
+#mainWrapperSingle{
+  background-color: antiquewhite;
+  main{
+    section{
+      min-height:100vh;
+    }
+  }
+}
+#home{
+  display:flex;
+  background: RGBA(20, 94, 48, 0.5);
+  background: linear-gradient(180deg,rgba(20, 94, 48, .2) 0%, rgba(20, 94, 48, 1) 25%, rgba(20, 94, 48, .8) 75%, rgba(20, 94, 48, .2) 100%);
+.heroVideo{
+    margin:auto;
+  }
+}
+#about{
+  background: linear-gradient(180deg,rgba(20, 94, 48, .2) 0%, rgba(20, 94, 48, .2) 90%, white 100%);
+  display:flex;
+  .aboutWrapper{
+    margin:auto 0;
+  }
+}
+#services{
+  display:flex;
+  background: linear-gradient(180deg,white 0%, white 90%, rgba(20, 94, 48, .8) 100%);
+  .header{
+    padding-left: $gutter;
+  }
+  .servicesWrapper{
+    margin:auto;
+  }
+}
+#form{
+  background-color: rgba(20, 94, 48, .8);
+  color:white;
+  input[type=submit]{
+    background-color: $secondaryColor;
+    &:hover{
+      background-color: darken($secondaryColor,5%);
+    }
+  }
+}
+#navSingleWrapper{
+  background-color:$secondaryColor;
+  margin:0;
+  position: sticky;
+  top:0;
+  #singlePageMenu{
+    margin:0;
+    list-style-type: none;
+    display:flex;
+    padding:0;
+    li{
+      flex-basis:25%;
+      a{
+        display:flex;
+        flex-direction: column;
+        text-decoration: none;
+        align-items: center;
+        color:white;
+        span{
+          display:none;
+        }
+        
+        img{
+        width:44px;
+        height:auto;
+        }
+      }//end of a
+    }//end of li
+    li.active{
+      background-color: darken($secondaryColor, 10%);
+    }
+  }//end of singlePageMenu id
+}//end of menu

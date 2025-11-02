@@ -159,3 +159,24 @@ body{
     }
   }//End of Section
 }//End of #recommendations
+
+
+//single page nav
+#navSingleWrapper{
+  #singlePageMenu{
+    li{
+      a{
+        span{
+          display:block;
+          padding:$gutter;
+        }
+        img{
+            display:none;
+        }
+      }//end of a
+    }//end of li
+    li.active{
+      background-color: darken($secondaryColor, 10%);
+    }
+  }//end of singlePageMenu id
+}//end of menu
